@@ -1,0 +1,38 @@
+[
+	{
+		"name": "Abomasnow",
+		"sprite": "path",
+		"type": ["Erba", "Giaccio"],
+		"stats": {
+			"Hp": 90,
+			"Atk": 92,
+			"Def": 75,
+			"SpAtk": 92,
+			"SpDef": 85,
+			"Spd": 60,
+			"Tot": 494
+		},
+		"abilities": {
+			"scendineve": 1
+		},
+		"male": 0.5
+	},
+	{
+		"name": "Tyranitar",
+		"sprite": "path",
+		"type": ["Buio", "Roccia"],
+		"stats": {
+			"Hp": 100,
+			"Atk": 134,
+			"Def": 110,
+			"SpAtk": 95,
+			"SpDef": 100,
+			"Spd": 61,
+			"Tot": 600
+		},
+		"abilities": {
+			"sabbiafiume": 1
+		},
+		"male": 0.5
+	}
+]
