@@ -10,7 +10,6 @@
 
 		if (res.ok) {
 			pokedex = await res.json();
-			console.log(pokedex);
 		}
 	});
 </script>

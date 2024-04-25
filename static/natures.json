@@ -1,162 +1,162 @@
 [
 	{
 		"name": "Allegra",
-    "stats": {
-      "Spd": 1.1,
-      "SpAtk": 0.9
-    }
+		"stats": {
+			"Spd": 1.1,
+			"SpAtk": 0.9
+		}
 	},
 	{
 		"name": "Ardente",
-    "stats": {
-      "SpAtk": 1.1,
-      "SpDef": 0.9
-    }
+		"stats": {
+			"SpAtk": 1.1,
+			"SpDef": 0.9
+		}
 	},
 	{
 		"name": "Ardita",
-    "stats": {}
+		"stats": {}
 	},
 	{
 		"name": "Audace",
-    "stats": {
-      "Atk": 1.1,
-      "Spd": 0.9
-    }
+		"stats": {
+			"Atk": 1.1,
+			"Spd": 0.9
+		}
 	},
 	{
 		"name": "Birbona",
-    "stats": {
-      "Atk": 1.1,
-      "SpDef": 0.9
-    }
+		"stats": {
+			"Atk": 1.1,
+			"SpDef": 0.9
+		}
 	},
 	{
 		"name": "Calma",
-    "stats": {
-      "SpDef": 1.1,
-      "Atk": 0.9
-    }
+		"stats": {
+			"SpDef": 1.1,
+			"Atk": 0.9
+		}
 	},
 	{
 		"name": "Cauta",
-    "stats": {
-      "SpDef": 1.1,
-      "SpAtk": 0.9
-    }
+		"stats": {
+			"SpDef": 1.1,
+			"SpAtk": 0.9
+		}
 	},
 	{
 		"name": "Decisa",
-    "stats": {
-      "Atk": 1.1,
-      "SpAtk": 0.9
-    }
+		"stats": {
+			"Atk": 1.1,
+			"SpAtk": 0.9
+		}
 	},
 	{
 		"name": "Docile",
-    "stats": {}
+		"stats": {}
 	},
 	{
 		"name": "Fiacca",
-    "stats": {
-      "Def": 1.1,
-      "SpDef": 0.9
-    }
+		"stats": {
+			"Def": 1.1,
+			"SpDef": 0.9
+		}
 	},
 	{
 		"name": "Furba",
-    "stats": {}
+		"stats": {}
 	},
 	{
 		"name": "Gentile",
-    "stats": {
-      "SpDef": 1.1,
-      "Def": 0.9
-    }
+		"stats": {
+			"SpDef": 1.1,
+			"Def": 0.9
+		}
 	},
 	{
 		"name": "Ingenua",
-    "stats": {
-      "Spd": 1.1,
-      "SpDef": 0.9
-    }
+		"stats": {
+			"Spd": 1.1,
+			"SpDef": 0.9
+		}
 	},
 	{
 		"name": "Lesta",
 		"stats": {
-      "Spd": 1.1,
-      "Def": 0.9
-    }
+			"Spd": 1.1,
+			"Def": 0.9
+		}
 	},
 	{
 		"name": "Mite",
 		"stats": {
-      "SpAtk": 1.1,
-      "Def": 0.9
-    }
+			"SpAtk": 1.1,
+			"Def": 0.9
+		}
 	},
 	{
 		"name": "Modesta",
 		"stats": {
-      "SpAtk": 1.1,
-      "Atk": 0.9
-    }
+			"SpAtk": 1.1,
+			"Atk": 0.9
+		}
 	},
 	{
 		"name": "Placida",
 		"stats": {
-      "Def": 1.1,
-      "Spd": 0.9
-    }
+			"Def": 1.1,
+			"Spd": 0.9
+		}
 	},
 	{
 		"name": "Quieta",
 		"stats": {
-      "SpAtk": 1.1,
-      "Spd": 0.9
-    }
+			"SpAtk": 1.1,
+			"Spd": 0.9
+		}
 	},
 	{
 		"name": "Ritrosa",
-    "stats": {}
+		"stats": {}
 	},
 	{
 		"name": "Scaltra",
-    "stats": {
-      "Def": 1.1,
-      "SpAtk": 0.9
-    }
+		"stats": {
+			"Def": 1.1,
+			"SpAtk": 0.9
+		}
 	},
 	{
 		"name": "Schiva",
-    "stats": {
-      "Atk": 1.1,
-      "Def": 0.9
-    }
+		"stats": {
+			"Atk": 1.1,
+			"Def": 0.9
+		}
 	},
 	{
 		"name": "Seria",
-    "stats": {}
+		"stats": {}
 	},
 	{
 		"name": "Sicura",
-    "stats": {
-      "Def": 1.1,
-      "Atk": 0.9
-    }
+		"stats": {
+			"Def": 1.1,
+			"Atk": 0.9
+		}
 	},
 	{
 		"name": "Timida",
 		"stats": {
-      "Spd": 1.1,
-      "Atk": 0.9
-    }
+			"Spd": 1.1,
+			"Atk": 0.9
+		}
 	},
 	{
 		"name": "Vivace",
 		"stats": {
-      "SpDef": 1.1,
-      "Spd": 0.9
-    }
+			"SpDef": 1.1,
+			"Spd": 0.9
+		}
 	}
 ]
