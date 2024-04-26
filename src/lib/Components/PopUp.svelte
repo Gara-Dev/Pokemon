@@ -8,9 +8,9 @@
 
 	export let pokemon: Pokemon;
 
-	let level = 50;
-	const baseStatMax = 200;
-	const EffStatMax = 300;
+	let level: number = 50;
+	const baseStatMax: number = 200;
+	const EffStatMax: number = 400;
 	let natures: any;
 	let nature: Nature;
 	let stats: Stats = {};
@@ -20,6 +20,12 @@
 		for (let k of Object.keys(pokemon.stats) as Array<keyof Stats>) {
 			IVs[k] = Math.floor(Math.random() * 32);
 		}
+	}
+
+	function updateLevel() {
+		if (level < 1) level = 1;
+		if (level > 100) level = 100;
+		updateAll();
 	}
 
 	function updateHp() {
@@ -34,7 +40,7 @@
 		);
 	}
 
-	function getStats() {
+	function updateAll() {
 		updateHp();
 		for (let k of Object.keys(pokemon.stats) as Array<keyof Stats>) {
 			if (k != 'Hp') updateOther(k);
@@ -49,6 +55,7 @@
 
 		if (stat == 'Hp') updateHp();
 		else updateOther(stat);
+		console.log(level);
 	}
 
 	onMount(async () => {
@@ -59,18 +66,21 @@
 			nature = (await natures)[Math.floor(Math.random() * 25) + 1];
 		}
 		generateIV();
-		getStats();
+		updateAll();
 	});
 
 	async function regenerate() {
 		nature = await natures[Math.floor(Math.random() * 25)];
 		generateIV();
-		getStats();
+		updateAll();
 	}
 </script>
 
 <div class="popup-content">
 	<div class="img-wrapper">
+		<label for="level">Livello:</label>
+		<input name="level" type="number" min="1" max="100" bind:value={level} on:input={updateLevel} />
+
 		<img alt={pokemon.name} src={pokemon.sprite} />
 		<button on:click={regenerate}><img src="/img/misc/refresh.svg" alt="refresh" /></button>
 	</div>
