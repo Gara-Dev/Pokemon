@@ -4,12 +4,13 @@
 	import type { Nature } from '$lib/types/Nature';
 	import { onMount } from 'svelte';
 	import StatBar from '$lib/Components/StatBar.svelte';
+	import IV from './IV.svelte';
 
 	export let pokemon: Pokemon;
 
 	let level = 50;
-  let baseStatMax = 200;
-  let EffStatMax = 300;
+	const baseStatMax = 200;
+	const EffStatMax = 300;
 	let natures: any;
 	let nature: Nature;
 	let stats: Stats = {};
@@ -35,15 +36,15 @@
 
 	function getStats() {
 		updateHp();
-
 		for (let k of Object.keys(pokemon.stats) as Array<keyof Stats>) {
 			if (k != 'Hp') updateOther(k);
 		}
 	}
 
-	function IVupdate(stat: keyof Stats) {
-		if ((IVs[stat] ?? -1) > 31) IVs[stat] = 31;
+	function IVupdate(stat: keyof Stats, value: number | undefined) {
+		IVs[stat] = value;
 
+		if ((IVs[stat] ?? -1) > 31) IVs[stat] = 31;
 		if ((IVs[stat] ?? -1) < 0) IVs[stat] = 0;
 
 		if (stat == 'Hp') updateHp();
@@ -88,11 +89,21 @@
 			</article>
 
 			<article>
-				<StatBar statName={'SpAtk'} stat={pokemon.stats.SpAtk} max={baseStatMax} color={'SpAtkColor'} />
+				<StatBar
+					statName={'SpAtk'}
+					stat={pokemon.stats.SpAtk}
+					max={baseStatMax}
+					color={'SpAtkColor'}
+				/>
 			</article>
 
 			<article>
-				<StatBar statName={'SpDef'} stat={pokemon.stats.SpDef} max={baseStatMax} color={'SpDefColor'} />
+				<StatBar
+					statName={'SpDef'}
+					stat={pokemon.stats.SpDef}
+					max={baseStatMax}
+					color={'SpDefColor'}
+				/>
 			</article>
 
 			<article>
@@ -102,98 +113,28 @@
 
 		<section>
 			<article>
-
-				<StatBar statName={'Hp'} stat={stats.Hp} max={300} color={'HpColor'} />
-				<input
-					bind:value={IVs.Hp}
-					type="number"
-					name="Hp"
-					id="HpIV"
-					min="0"
-					max="31"
-					on:input={() => {
-						IVupdate('Hp');
-					}}
-				/>
+				<StatBar statName={'Hp'} stat={stats.Hp} max={EffStatMax} color={'HpColor'} />
+				<IV stat={'Hp'} {IVupdate} value={IVs.Hp} />
 			</article>
 			<article>
-
-				<StatBar statName={'Atk'} stat={stats.Atk} max={300} color={'AtkColor'} />
-
-				<input
-					bind:value={IVs.Atk}
-					type="number"
-					name="Atk"
-					id="AtkIV"
-					min="0"
-					max="31"
-					on:input={() => {
-						IVupdate('Atk');
-					}}
-				/>
+				<StatBar statName={'Atk'} stat={stats.Atk} max={EffStatMax} color={'AtkColor'} />
+				<IV stat={'Atk'} {IVupdate} value={IVs.Atk} />
 			</article>
 			<article>
-
-				<StatBar statName={'Def'} stat={stats.Def} max={300} color={'DefColor'} />
-
-				<input
-					bind:value={IVs.Def}
-					type="number"
-					name="Def"
-					id="DefIV"
-					min="0"
-					max="31"
-					on:input={() => {
-						IVupdate('Def');
-					}}
-				/>
+				<StatBar statName={'Def'} stat={stats.Def} max={EffStatMax} color={'DefColor'} />
+				<IV stat={'Def'} {IVupdate} value={IVs.Def} />
 			</article>
 			<article>
-
-				<StatBar statName={'SpAtk'} stat={stats.SpAtk} max={300} color={'SpAtkColor'} />
-
-				<input
-					bind:value={IVs.SpAtk}
-					type="number"
-					name="SpAtk"
-					id="SpAtkIV"
-					min="0"
-					max="31"
-					on:input={() => {
-						IVupdate('SpAtk');
-					}}
-				/>
+				<StatBar statName={'SpAtk'} stat={stats.SpAtk} max={EffStatMax} color={'SpAtkColor'} />
+				<IV stat={'SpAtk'} {IVupdate} value={IVs.SpAtk} />
 			</article>
 			<article>
-
-				<StatBar statName={'SpDef'} stat={stats.SpDef} max={300} color={'SpDefColor'} />
-
-				<input
-					bind:value={IVs.SpDef}
-					type="number"
-					name="SpDef"
-					id="SpDefIV"
-					min="0"
-					max="31"
-					on:input={() => {
-						IVupdate('SpDef');
-					}}
-				/>
+				<StatBar statName={'SpDef'} stat={stats.SpDef} max={EffStatMax} color={'SpDefColor'} />
+				<IV stat={'SpDef'} {IVupdate} value={IVs.SpDef} />
 			</article>
 			<article>
-				<StatBar statName={'Spd'} stat={stats.Spd} max={300} color={'SpdColor'} />
-
-				<input
-					bind:value={IVs.Spd}
-					type="number"
-					name="Spd"
-					id="SpdIV"
-					min="0"
-					max="31"
-					on:input={() => {
-						IVupdate('Spd');
-					}}
-				/>
+				<StatBar statName={'Spd'} stat={stats.Spd} max={EffStatMax} color={'SpdColor'} />
+				<IV stat={'Spd'} {IVupdate} value={IVs.Spd} />
 			</article>
 			<span>
 				Natura: {nature?.name}
@@ -258,11 +199,6 @@
 					display: flex;
 					flex-direction: row;
 					height: 2vw;
-
-					input {
-						width: 15%;
-						font-size: larger;
-					}
 				}
 
 				> span {
