@@ -4,20 +4,22 @@
 	import type { Nature } from '$lib/types/Nature';
 	import { onMount } from 'svelte';
 	import StatBar from '$lib/Components/StatBar.svelte';
-	import IV from './IV.svelte';
+	import IV from '$lib/Components/IV.svelte';
 
 	export let pokemon: Pokemon;
 
 	let level: number = 50;
-	const baseStatMax: number = 200;
-	const EffStatMax: number = 400;
+	const baseStatMax: number = 170;
+	const EffStatMax: number = 300;
+  const HpEffStat: number = 400
 	let natures: any;
 	let nature: Nature;
 	let stats: Stats = {};
 	let IVs: Stats = {};
+	let keys: Array<keyof Stats> = Object.keys(pokemon.stats) as Array<keyof Stats>;
 
 	function generateIV() {
-		for (let k of Object.keys(pokemon.stats) as Array<keyof Stats>) {
+		for (let k of keys) {
 			IVs[k] = Math.floor(Math.random() * 32);
 		}
 	}
@@ -42,7 +44,7 @@
 
 	function updateAll() {
 		updateHp();
-		for (let k of Object.keys(pokemon.stats) as Array<keyof Stats>) {
+		for (let k of keys) {
 			if (k != 'Hp') updateOther(k);
 		}
 	}
@@ -86,66 +88,33 @@
 	</div>
 	<div>
 		<section>
-			<article>
-				<StatBar statName={'Hp'} stat={pokemon.stats.Hp} max={baseStatMax} color={'HpColor'} />
-			</article>
-
-			<article>
-				<StatBar statName={'Atk'} stat={pokemon.stats.Atk} max={baseStatMax} color={'AtkColor'} />
-			</article>
-
-			<article>
-				<StatBar statName={'Def'} stat={pokemon.stats.Def} max={baseStatMax} color={'DefColor'} />
-			</article>
-
-			<article>
-				<StatBar
-					statName={'SpAtk'}
-					stat={pokemon.stats.SpAtk}
-					max={baseStatMax}
-					color={'SpAtkColor'}
-				/>
-			</article>
-
-			<article>
-				<StatBar
-					statName={'SpDef'}
-					stat={pokemon.stats.SpDef}
-					max={baseStatMax}
-					color={'SpDefColor'}
-				/>
-			</article>
-
-			<article>
-				<StatBar statName={'Spd'} stat={pokemon.stats.Spd} max={baseStatMax} color={'SpdColor'} />
-			</article>
+			{#each keys as stat}
+				<article>
+					<StatBar
+						statName={stat}
+						stat={pokemon.stats[stat]}
+						max={baseStatMax}
+						color={stat + 'Color'}
+					/>
+				</article>
+			{/each}
 		</section>
 
 		<section>
-			<article>
-				<StatBar statName={'Hp'} stat={stats.Hp} max={EffStatMax} color={'HpColor'} />
-				<IV stat={'Hp'} {IVupdate} value={IVs.Hp} />
-			</article>
-			<article>
-				<StatBar statName={'Atk'} stat={stats.Atk} max={EffStatMax} color={'AtkColor'} />
-				<IV stat={'Atk'} {IVupdate} value={IVs.Atk} />
-			</article>
-			<article>
-				<StatBar statName={'Def'} stat={stats.Def} max={EffStatMax} color={'DefColor'} />
-				<IV stat={'Def'} {IVupdate} value={IVs.Def} />
-			</article>
-			<article>
-				<StatBar statName={'SpAtk'} stat={stats.SpAtk} max={EffStatMax} color={'SpAtkColor'} />
-				<IV stat={'SpAtk'} {IVupdate} value={IVs.SpAtk} />
-			</article>
-			<article>
-				<StatBar statName={'SpDef'} stat={stats.SpDef} max={EffStatMax} color={'SpDefColor'} />
-				<IV stat={'SpDef'} {IVupdate} value={IVs.SpDef} />
-			</article>
-			<article>
-				<StatBar statName={'Spd'} stat={stats.Spd} max={EffStatMax} color={'SpdColor'} />
-				<IV stat={'Spd'} {IVupdate} value={IVs.Spd} />
-			</article>
+			{#each keys as stat}
+				{#if stat != 'Tot'}
+					<article>
+						<StatBar
+							statName={stat}
+							stat={stats[stat]}
+							max={(stat != 'Hp' ? EffStatMax : HpEffStat)}
+							color={stat + 'Color'}
+						/>
+						<IV {stat} {IVupdate} value={IVs[stat]} />
+					</article>
+				{/if}
+			{/each}
+
 			<span>
 				Natura: {nature?.name}
 				{#if nature != undefined && Object.keys(nature.stats)[0] != undefined}
