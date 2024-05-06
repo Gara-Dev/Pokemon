@@ -1,19 +1,2 @@
-<script lang="ts">
-	import SearchBar from '$lib/Components/SearchBar.svelte';
-	import { onMount } from 'svelte';
-	import type { Pokemon } from '$lib/types/Pokemon';
-
-	let pokedex: Pokemon[];
-
-	onMount(async () => {
-		const res = await fetch('/pokedex.json');
-
-		if (res.ok) {
-			pokedex = await res.json();
-		}
-	});
-</script>
-
-{#if pokedex}
-	<SearchBar {pokedex} />
-{/if}
+<a href="/generator">gene</a>
+<a href="/wiki">wiki</a>
