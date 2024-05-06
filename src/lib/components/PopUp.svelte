@@ -3,15 +3,15 @@
 	import type { Stats } from '$lib/types/Stats';
 	import type { Nature } from '$lib/types/Nature';
 	import { onMount } from 'svelte';
-	import StatBar from '$lib/Components/StatBar.svelte';
-	import IV from '$lib/Components/IV.svelte';
+	import StatBar from '$lib/components/StatBar.svelte';
+	import IV from '$lib/components/IV.svelte';
 
 	export let pokemon: Pokemon;
 
 	let level: number = 50;
 	const baseStatMax: number = 170;
 	const EffStatMax: number = 300;
-  const HpEffStat: number = 400
+	const HpEffStat: number = 400;
 	let natures: any;
 	let nature: Nature;
 	let stats: Stats = {};
@@ -107,7 +107,7 @@
 						<StatBar
 							statName={stat}
 							stat={stats[stat]}
-							max={(stat != 'Hp' ? EffStatMax : HpEffStat)}
+							max={stat != 'Hp' ? EffStatMax : HpEffStat}
 							color={stat + 'Color'}
 						/>
 						<IV {stat} {IVupdate} value={IVs[stat]} />
@@ -129,14 +129,7 @@
 </div>
 
 <style lang="scss">
-	:root {
-		--HpColor: #65ea2282;
-		--AtkColor: #ecd0439f;
-		--DefColor: #e97d2f86;
-		--SpAtkColor: #32bee17c;
-		--SpDefColor: #5170d778;
-		--SpdColor: #ef8dec77;
-	}
+	@import url('/colors.css');
 
 	.img-wrapper {
 		text-align: center;
