@@ -1,0 +1,28 @@
+:root {
+	--HpColor: #65ea2282;
+	--AtkColor: #ecd0439f;
+	--DefColor: #e97d2f86;
+	--SpAtkColor: #32bee17c;
+	--SpDefColor: #5170d778;
+	--SpdColor: #ef8dec77;
+
+	--Normale: #6e736e;
+	--Fuoco: #d01f20;
+	--Lotta: #e87500;
+	--Acqua: #0b5ac0;
+	--Volante: #3b7ec0;
+	--Erba: #206f0e;
+	--Veleno: #8033b7;
+	--Elettro: #aa8300;
+	--Terra: #84481b;
+	--Psico: #aa0b3e;
+	--Roccia: #837c4b;
+	--Ghiaccio: #0da5cc;
+	--Coleottero: #687506;
+	--Drago: #2232b1;
+	--Spettro: #491a49;
+	--Buio: #241b1a;
+	--Acciaio: #3b7b92;
+	--Folletto: #cb40cb;
+	--Ombra: #483b62;
+}

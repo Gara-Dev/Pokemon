@@ -2,7 +2,7 @@
 	{
 		"name": "Abomasnow",
 		"sprite": "/img/pokemons/abomasnow.jpeg",
-		"type": ["Erba", "Giaccio"],
+		"type": ["Erba", "Ghiaccio"],
 		"stats": {
 			"Hp": 90,
 			"Atk": 92,

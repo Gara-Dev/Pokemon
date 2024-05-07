@@ -1,0 +1,103 @@
+{
+	"Normale": {
+		"weakness": ["Lotta"],
+		"resistance": [],
+		"immune": ["Spettro"]
+	},
+	"Fuoco": {
+		"weakness": ["Terra", "Roccia", "Acqua"],
+		"resistance": ["Coleottero", "Acciao", "Fuoco", "Erba", "Ghiaccio"],
+		"immune": []
+	},
+	"Lotta": {
+		"weakness": ["Volante", "Psico", "Folletto"],
+		"resistance": ["Roccia", "Coleottero", "Buio"],
+		"immune": []
+	},
+	"Acqua": {
+		"weakness": ["Erba", "Coleottero"],
+		"resistance": ["Acciao", "Fuoco", "Acqua", "Ghiaccio"],
+		"immune": []
+	},
+	"Volante": {
+		"weakness": ["Roccia", "Elettro", "Ghiaccio"],
+		"resistance": ["Lotta", "Coleottero", "Erba"],
+		"immune": ["Terra"]
+	},
+	"Erba": {
+		"weakness": ["Volante", "Veleno", "Coleottero", "Fuoco", "Ghiaccio"],
+		"resistance": ["Terra", "Acqua", "Erba", "Elettro"],
+		"immune": []
+	},
+	"Veleno": {
+		"weakness": ["Terra", "Psico"],
+		"resistance": ["Lotta", "Veleno", "Coleottero", "Erba", "Folletto"],
+		"immune": []
+	},
+	"Elettro": {
+		"weakness": ["Terra"],
+		"resistance": ["Volante", "Acciao", "Elettro"],
+		"immune": []
+	},
+	"Terra": {
+		"weakness": ["Acqua", "Erba", "Ghiaccio"],
+		"resistance": ["Veleno", "Roccia"],
+		"immune": ["Elettro"]
+	},
+	"Psico": {
+		"weakness": ["Coleottero", "Spettro", "Buio"],
+		"resistance": ["Lotta", "Psico"],
+		"immune": []
+	},
+	"Roccia": {
+		"weakness": ["Lotta", "Terra", "Acciaio", "Acqua", "Erba"],
+		"resistance": ["Normale", "Volante", "Veleno", "Fuoco"],
+		"immune": []
+	},
+	"Ghiaccio": {
+		"weakness": ["Lotta", "Roccia", "Acciaio", "Fuoco"],
+		"resistance": ["Ghiaccio"],
+		"immune": []
+	},
+	"Coleotter": {
+		"weakness": ["Volante", "Roccia", "Fuoco"],
+		"resistance": ["Lotta", "Terra", "Erba"],
+		"immune": []
+	},
+	"Drago": {
+		"weakness": ["Ghiaccio", "Drago", "Folletto"],
+		"resistance": ["Fuoco", "Acqua", "Erba", "Elettro"],
+		"immune": []
+	},
+	"Spettro": {
+		"weakness": ["Spettro", "Buio"],
+		"resistance": ["Veleno", "Coleottero"],
+		"immune": ["Normale", "Lotta"]
+	},
+	"Buio": {
+		"weakness": ["Lotta", "Coleottero", "Folletto"],
+		"resistance": ["Spettro", "Buio"],
+		"immune": ["Psico"]
+	},
+	"Acciaio": {
+		"weakness": ["Lotta", "Terra", "Fuoco"],
+		"resistance": [
+			"Normale",
+			"Volante",
+			"Roccia",
+			"Coleottero",
+			"Acciao",
+			"Erba",
+			"Psico",
+			"Ghiaccio",
+			"Drago",
+			"Folletto"
+		],
+		"immune": ["Veleno"]
+	},
+	"Folletto": {
+		"weakness": ["Veleno", "Acciaio"],
+		"resistance": ["Lotta", "Coleottero", "Buio"],
+		"immune": ["Drago"]
+	}
+}
