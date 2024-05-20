@@ -2,7 +2,18 @@
 	{
 		"name": "Abomasnow",
 		"sprite": "/img/pokemons/abomasnow.jpeg",
-		"type": ["Erba", "Ghiaccio"],
+		"type": {
+			"Erba": {
+				"weakness": ["Volante", "Veleno", "Coleottero", "Fuoco", "Ghiaccio"],
+				"resistance": ["Terra", "Acqua", "Erba", "Elettro"],
+				"immune": []
+			},
+			"Ghiaccio": {
+				"weakness": ["Lotta", "Roccia", "Acciaio", "Fuoco"],
+				"resistance": ["Ghiaccio"],
+				"immune": []
+			}
+		},
 		"stats": {
 			"Hp": 90,
 			"Atk": 92,
@@ -20,7 +31,18 @@
 	{
 		"name": "Tyranitar",
 		"sprite": "path",
-		"type": ["Buio", "Roccia"],
+		"type": {
+			"Buio": {
+				"weakness": ["Lotta", "Coleottero", "Folletto"],
+				"resistance": ["Spettro", "Buio"],
+				"immune": ["Psico"]
+			},
+			"Roccia": {
+				"weakness": ["Lotta", "Terra", "Acciaio", "Acqua", "Erba"],
+				"resistance": ["Normale", "Volante", "Veleno", "Fuoco"],
+				"immune": []
+			}
+		},
 		"stats": {
 			"Hp": 100,
 			"Atk": 134,

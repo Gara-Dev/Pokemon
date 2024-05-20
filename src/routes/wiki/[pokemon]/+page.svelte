@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import type { Pokemon } from '$lib/types/Pokemon';
 	import StatBar from '$lib/components/StatBar.svelte';
+	import WeaknessGrid from '$lib/components/WeaknessGrid.svelte';
+	import Type from '$lib/components/TypeDisplay.svelte';
 	import type { Stats } from '$lib/types/Stats';
 
 	export let data;
 
-  let keys: Array<keyof Stats> = Object.keys(data.pokemon.stats) as Array<keyof Stats>
+	let keys: Array<keyof Stats> = Object.keys(data.pokemon.stats) as Array<keyof Stats>;
 
 	onMount(async () => {
 		console.log(data.pokemon);
@@ -19,14 +20,11 @@
 			<div>
 				<img src={data.pokemon.sprite} alt={data.pokemon.name} />
 				<div class="type-container">
-					{#each data.pokemon.type as type}
-						<div style="background-color: var(--{type});" class="type">{type}</div>
+					{#each Object.keys(data.pokemon.type) as type}
+						<Type {type} />
 					{/each}
 				</div>
 			</div>
-			<div class="weakness"></div>
-		</article>
-		<article>
 			<div class="stats">
 				{#each keys as stat}
 					<article>
@@ -40,6 +38,9 @@
 				{/each}
 			</div>
 		</article>
+		<article>
+			<WeaknessGrid pokemon={data.pokemon} />
+		</article>
 	</section>
 </main>
 
@@ -49,11 +50,10 @@
 		color: black;
 		background-color: white;
 		border-radius: 20px;
-		width: 60vw;
-		height: 50vw;
+		width: 55vw;
 		margin: 5vw 20vw 0;
 		section {
-			padding-top: 2%;
+			padding: 2% 2%;
 			> article {
 				display: flex;
 				flex-direction: row;
@@ -61,19 +61,6 @@
 				img {
 					width: 20vw;
 					height: 20vw;
-				}
-				.weakness {
-					display: grid;
-					grid-template-columns: auto auto auto;
-					background-color: #2196f3;
-					padding: 10px;
-					> div {
-						background-color: rgba(255, 255, 255, 0.8);
-						border: 1px solid rgba(0, 0, 0, 0.8);
-						padding: 20px;
-						font-size: 30px;
-						text-align: center;
-					}
 				}
 				.stats {
 					display: flex;
@@ -98,14 +85,5 @@
 		align-items: center;
 		width: 100%;
 		justify-content: center;
-		.type {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			border-radius: 20px;
-			width: 8vw;
-			height: 2vw;
-			border: 3px solid black;
-		}
 	}
 </style>

@@ -59,7 +59,7 @@
 		"resistance": ["Ghiaccio"],
 		"immune": []
 	},
-	"Coleotter": {
+	"Coleottero": {
 		"weakness": ["Volante", "Roccia", "Fuoco"],
 		"resistance": ["Lotta", "Terra", "Erba"],
 		"immune": []
