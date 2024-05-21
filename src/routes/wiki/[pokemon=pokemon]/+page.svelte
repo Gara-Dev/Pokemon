@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import StatBar from '$lib/components/StatBar.svelte';
 	import WeaknessGrid from '$lib/components/WeaknessGrid.svelte';
+	import AbilityDisplay from '$lib/components/AbilityDisplay.svelte';
 	import Type from '$lib/components/TypeDisplay.svelte';
 	import type { Stats } from '$lib/types/Stats';
 
@@ -36,6 +37,15 @@
 						/>
 					</article>
 				{/each}
+				<div class="ability-container">
+					<AbilityDisplay ability={data.pokemon.abilities.ability1.name} />
+					{#if data.pokemon.abilities.ability2}
+						<AbilityDisplay ability={data.pokemon.abilities.ability2.name} />
+					{/if}
+					{#if data.pokemon.abilities.hidden}
+						<AbilityDisplay ability={data.pokemon.abilities.hidden.name} hidden={true} />
+					{/if}
+				</div>
 			</div>
 		</article>
 		<article>
@@ -84,6 +94,13 @@
 		flex-direction: row;
 		align-items: center;
 		width: 100%;
+		justify-content: center;
+	}
+	.ability-container {
+		display: flex;
+		flex-direction: row;
+		margin-top: 1vw;
+		align-items: center;
 		justify-content: center;
 	}
 </style>

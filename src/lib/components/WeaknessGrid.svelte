@@ -2,7 +2,6 @@
 	import type { Pokemon } from '$lib/types/Pokemon';
 	import type { Type } from '$lib/types/Type';
 	import type { Types } from '$lib/types/Types';
-	import TypeDisplay from '$lib/components/TypeDisplay.svelte';
 	import WeaknessComponent from '$lib/components/WeaknessComponent.svelte';
 	export let pokemon: Pokemon;
 

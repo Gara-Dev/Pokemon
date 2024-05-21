@@ -24,7 +24,21 @@
 			"Tot": 494
 		},
 		"abilities": {
-			"scendineve": 1
+			"ability1": {
+				"name": "scendineve",
+				"probability": 1,
+				"description": "Scendineve evoca una grandinata in lotta non appena un Pokémon che la possiede entra in campo oppure acquisisce questa abilità. Se un Pokémon con Scendineve viene mandato in campo nello stesso turno in cui viene mandato in campo un altro Pokémon con un'abilità che influenza la condizione atmosferica, l'abilità del Pokémon più lento sarà quella che prevarrà"
+			},
+			"ability2": {
+				"name": "sabbiafiume",
+				"probability": 1,
+				"description": "Sabbiafiume evoca una tempesta di sabbia in lotta nonappena un Pokémon con tale abilità entra in lotta oppure acquisisce questa abilità. Se un Pokémon con Terrempesta viene mandato in campo nello stesso turno in cui viene mandato in campo un altro Pokémon con un'abilità che influenza la condizione atmosferica, l'abilità del Pokémon più lento sarà quella che prevarrà."
+			},
+			"hidden": {
+				"name": "test",
+				"probability": 1,
+				"description": "Daje roma"
+			}
 		},
 		"male": 0.5
 	},
@@ -53,7 +67,11 @@
 			"Tot": 600
 		},
 		"abilities": {
-			"sabbiafiume": 1
+			"ability1": {
+				"name": "sabbiafiume",
+				"probability": 1,
+				"description": "Sabbiafiume evoca una tempesta di sabbia in lotta nonappena un Pokémon con tale abilità entra in lotta oppure acquisisce questa abilità. Se un Pokémon con Terrempesta viene mandato in campo nello stesso turno in cui viene mandato in campo un altro Pokémon con un'abilità che influenza la condizione atmosferica, l'abilità del Pokémon più lento sarà quella che prevarrà."
+			}
 		},
 		"male": 0.5
 	}
