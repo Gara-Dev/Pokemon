@@ -28,14 +28,26 @@
 			</div>
 			<div class="stats">
 				{#each keys as stat}
-					<article>
-						<StatBar
-							statName={stat}
-							stat={data.pokemon.stats[stat]}
-							max={200}
-							color={stat + 'Color'}
-						/>
-					</article>
+					{#if stat == 'Tot'}
+						<article>
+							<StatBar
+								statName={stat}
+								stat={data.pokemon.stats[stat]}
+								max={200}
+								color={stat + 'Color'}
+								tot={true}
+							/>
+						</article>
+					{:else}
+						<article>
+							<StatBar
+								statName={stat}
+								stat={data.pokemon.stats[stat]}
+								max={200}
+								color={stat + 'Color'}
+							/>
+						</article>
+					{/if}
 				{/each}
 				<div class="ability-container">
 					<AbilityDisplay ability={data.pokemon.abilities.ability1.name} />

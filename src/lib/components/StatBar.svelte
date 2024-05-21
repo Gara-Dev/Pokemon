@@ -3,12 +3,15 @@
 	export let stat: number | undefined;
 	export let max: number;
 	export let color: string;
+	export let tot = false;
 </script>
 
 <span>
 	{statName}
 	{stat}
-	<div style=" background-color: var(--{color}); width: {((stat ?? 1) / max) * 100}%;"></div>
+	<div
+		style=" background-color: var(--{color}); width: {(tot ? 1 : (stat ?? 1) / max) * 100}%;"
+	></div>
 </span>
 
 <style lang="scss">
