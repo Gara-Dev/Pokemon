@@ -40,11 +40,12 @@
 				"description": "Daje roma"
 			}
 		},
-		"male": 0.5
+		"male": 0.5,
+		"description": "Daje roma"
 	},
 	{
 		"name": "Tyranitar",
-		"sprite": "path",
+		"sprite": "/img/pokemons/tyranitar.webp",
 		"type": {
 			"Buio": {
 				"weakness": ["Lotta", "Coleottero", "Folletto"],
@@ -73,6 +74,7 @@
 				"description": "Sabbiafiume evoca una tempesta di sabbia in lotta nonappena un Pokémon con tale abilità entra in lotta oppure acquisisce questa abilità. Se un Pokémon con Terrempesta viene mandato in campo nello stesso turno in cui viene mandato in campo un altro Pokémon con un'abilità che influenza la condizione atmosferica, l'abilità del Pokémon più lento sarà quella che prevarrà."
 			}
 		},
-		"male": 0.5
+		"male": 0.5,
+		"description": "Daje roma"
 	}
 ]

@@ -1,5 +1,5 @@
 import type { Pokemon } from '$lib/types/Pokemon';
-import { getPokedex } from '$lib/helpers/index.js';
+import { getPokedex } from '$lib/helpers/';
 
 export function load({ params }) {
 	return {

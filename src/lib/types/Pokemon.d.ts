@@ -10,4 +10,5 @@ export interface Pokemon {
 	stats: Stats;
 	abilities: Abilities;
 	male: number;
+	description: stirng;
 }

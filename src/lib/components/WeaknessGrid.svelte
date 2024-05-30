@@ -79,13 +79,14 @@
 </table>
 
 <style lang="scss">
+	@import '/static/colors.css';
 	table {
 		span {
 			margin-left: 2vw;
 			font-weight: bolder;
 		}
 		margin-top: 1vw;
-		background-color: aqua;
+		background-color: var(--OuterCard);
 		border: 3px solid black;
 		border-radius: 20px;
 	}

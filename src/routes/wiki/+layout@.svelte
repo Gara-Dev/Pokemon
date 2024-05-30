@@ -1,9 +1,12 @@
-<slot />
+<main>
+	<slot />
+</main>
 
 <style lang="scss">
-	:global(body) {
+	main {
 		color: white;
 		background-color: black;
-		margin: 0;
+		min-height: 100vh;
+		min-width: 100vw;
 	}
 </style>

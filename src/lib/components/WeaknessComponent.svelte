@@ -30,11 +30,12 @@
 </tr>
 
 <style lang="scss">
+	@import '/static/colors.css';
 	td {
 		border-radius: 20px;
 	}
 	.container {
-		background-color: rgb(146, 255, 255);
+		background-color: var(--InnerCard);
 		p {
 			width: 4vw;
 			min-width: 4vw;
