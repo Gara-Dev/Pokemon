@@ -6,6 +6,7 @@
 	import Type from '$lib/components/TypeDisplay.svelte';
 	import type { Stats } from '$lib/types/Stats';
 	import PokemonDescription from '$lib/components/PokemonDescription.svelte';
+	import MoveGrid from '$lib/components/MoveGrid.svelte';
 
 	export let data;
 
@@ -66,6 +67,7 @@
 				<WeaknessGrid pokemon={data.pokemon} />
 			</article>
       <PokemonDescription description = {data.pokemon.description}/>
+      <MoveGrid moves= {data.pokemon.moves}/>
 		</section>
 	</div>
 </div>

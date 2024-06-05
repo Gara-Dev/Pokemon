@@ -41,8 +41,19 @@
 			}
 		},
 		"male": 0.5,
-		"description": "Abomasnow è un enorme creatura coperta da folto pelo prevalentemente bianco, infatti solo gli arti e la coda sono di colore verde, il corpo è tozzo e ha lunghe braccia con tre dita ciascuna, ha anche degli enormi zamponi con tre dita, il pelo tende ad essere più lungo sul petto, dietro la schiena e sul volto, motivo per cui viene coperta la bocca che è visibile solo quando aperta, gli occhi sono di colore roseo con piccole pupille e presenta del pelo rialzato sopra gli occhi, che dà l'impressione che abbia delle folte sopracciglia, dietro la schiena possiede anche cinque germogli verdi, il quinto che sarebbe quello più lungo è la coda, gli altri quattro sono sono disposti a quadrato."
-	},
+		"description": "Abomasnow è un enorme creatura coperta da folto pelo prevalentemente bianco, infatti solo gli arti e la coda sono di colore verde, il corpo è tozzo e ha lunghe braccia con tre dita ciascuna, ha anche degli enormi zamponi con tre dita, il pelo tende ad essere più lungo sul petto, dietro la schiena e sul volto, motivo per cui viene coperta la bocca che è visibile solo quando aperta, gli occhi sono di colore roseo con piccole pupille e presenta del pelo rialzato sopra gli occhi, che dà l'impressione che abbia delle folte sopracciglia, dietro la schiena possiede anche cinque germogli verdi, il quinto che sarebbe quello più lungo è la coda, gli altri quattro sono sono disposti a quadrato.",
+    "moves": [
+      {
+        "lvl": 0,
+        "nome": "Vento di Fata",
+        "tipo": "Folletto",
+        "categoria": "Speciale",
+        "potenza": 40,
+        "precisione": 100,
+        "PP": 30
+      }
+    ]
+  },
 	{
 		"name": "Tyranitar",
 		"sprite": "/img/pokemons/tyranitar.webp",
@@ -75,6 +86,7 @@
 			}
 		},
 		"male": 0.5,
-		"description": "Daje roma"
+		"description": "Daje roma",
+    "moves": []
 	}
 ]
