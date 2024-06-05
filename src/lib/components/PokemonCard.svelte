@@ -1,25 +1,12 @@
 <script lang="ts">
 	import type { Pokemon } from '$lib/types/Pokemon.d.ts';
 	export let pokemon: Pokemon;
-	let hidden = true;
-	function show() {
-		hidden = false;
-	}
-	function hide() {
-		hidden = true;
-	}
 </script>
 
 <div class="card">
 	<div class="img-container">
-		<img
-			src={pokemon.sprite}
-			alt={pokemon.name}
-			on:mouseleave={hide}
-			on:mouseover={show}
-			on:focus={show}
-		/>
-		<p on:mouseleave={hide} on:mouseover={show} on:focus={show}>
+		<img src={pokemon.sprite} alt={pokemon.name} />
+		<p>
 			{pokemon.description}
 		</p>
 	</div>
@@ -85,8 +72,5 @@
 				background-color: var(--InnerCard);
 			}
 		}
-	}
-	.hidden {
-		display: none;
 	}
 </style>

@@ -1,2 +1,5 @@
-<a href="/generator">gene</a>
-<a href="/wiki">wiki</a>
+<script lang="ts">
+	import NavBar from '$lib/components/NavBar.svelte';
+</script>
+
+<NavBar />
